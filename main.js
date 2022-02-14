@@ -9,11 +9,10 @@ function* getStudents() {
 
 function main() {
     const students = getStudents();
-    let value = students.next();
-    while (!value.done) {
-        console.log(value.value);
-        value = students.next();
+    for (const value of students) {
+        console.log(value);
     }
 }
+
 
 main();
